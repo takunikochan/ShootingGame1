@@ -23,7 +23,7 @@ public class EnemyBase extends Enemy{
 		if(x<100) vx=GameWorld.stage;
 		
 		//敵(直進)を出現
-		if(Math.random()<0.2) {
+		if(Math.random()<0.06) {
 			GameWorld.enemies.add(new StraightEnemy(x,y,0,1+GameWorld.stage));
 			
 		//敵(ランダム)	
@@ -37,7 +37,7 @@ public class EnemyBase extends Enemy{
 		}
 		
 		//敵(ﾌﾟﾚｲﾔｰに移動)
-		if(Math.random()<0.2) {
+		if(Math.random()<0.02) {
 			GameWorld.enemies.add(new CurveEnemy(x,y,0,GameWorld.stage));
 		}
 		

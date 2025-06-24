@@ -21,6 +21,13 @@ public class Player extends Character implements KeyListener{
 		if (e.getKeyCode()==KeyEvent.VK_RIGHT) {
 			vx=5;
 		}
+		if (e.getKeyCode()==KeyEvent.VK_UP) {
+			vy=-5;
+		}
+		if (e.getKeyCode()==KeyEvent.VK_DOWN) {
+			vy=5;
+		}
+		
 		if (e.getKeyCode()==KeyEvent.VK_SPACE) {
 			GameWorld.playerBullets.add(
 					new PlayerBullet(x,y,0,-10));
@@ -42,6 +49,12 @@ public class Player extends Character implements KeyListener{
 		if (e.getKeyCode()==KeyEvent.VK_RIGHT) {
 			vx=0;
 		}
+		if (e.getKeyCode()==KeyEvent.VK_UP) {
+			vy=0;
+		}
+		if (e.getKeyCode()==KeyEvent.VK_DOWN) {
+			vy=0;
+		}
 		}
 	    
 	public void keyTyped(KeyEvent e) {
@@ -52,6 +65,9 @@ public class Player extends Character implements KeyListener{
 		super.move();
 		if (x<0) x=0;
 		if (x>370) x=370;
+		
+		if (y < 0) y = 0;           
+		if (y > 350) y = 350; 
 	}
 	
 	
